@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>JS Documentation</h1>
+      </header>
+      <a href="#fundamentals" class="nav-link">Fundamentals</a>
+      <a href="#advanced" class="nav-link">Advanced</a>
+      <a href="#web_apis" class="nav-link">Web APIs</a>
+      <a href="#tooling_&_misc" class="nav-link">Tooling & Misc</a>
+      <a href="#next_steps" class="nav-link">Next Steps</a>
+    </nav>
+    <main id="main-doc">
+      <!-- JS fundamentals  -->
+      <section id="fundamentals" class="main-section">
+        <header>Fundamentals</header>
+        <p>
+          The script tag always goes before closing the body tag in the HTML
+          file.
+        </p>
+        <p>
+          <span>Scope: </span>Defines where variables and functions are
+          accesible inside of your program.
+        </p>
+        <h2>Global Scope</h2>
+        <code> var fruit = 'apple'; console.log(fruit); </code>
+        <h2>Local Scope</h2>
+        <p>
+          <span>Function scope: </span><strong>var</strong> defines function
+          scope within the function. It cannot be accessed outside from it.
+        </p>
+        <code> function getDate(){ var date = new Date(); return date; } </code>
+        <p>
+          <span>Block scope: </span><strong>const</strong> and
+          <strong>let</strong> define block scope. Is the area within if,
+          switch, loops and whenever you see {curly brackets}, these variables
+          exist only within the block.
+        </p>
+        <p>
+          <span>Lexical scope: </span> Children scope have access to the parent
+          scope
+        </p>
+        <code>
+          function foo1(){ var fruit1 = 'apple'; const fruit2 = 'banana'; let
+          fruit3 = 'strawberry'; function foo2(){ console.log(`Fruits are:
+          ${fruit1}, ${fruit2} and ${fruit3}`); } foo2();} foo1();
+        </code>
+        <p>
+          <span>Hoisting: </span>JS mechanism where variables and function
+          declarations are moved to the top of their scope before code
+          execution.
+        </p>
+        <h2>Const vs. let vs. var:</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>var</td>
+              <td>let</td>
+              <td>const</td>
+            </tr>
+            <tr>
+              <td>reassigned</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>no</td>
+            </tr>
+            <tr>
+              <td>scope</td>
+              <td>function</td>
+              <td>block</td>
+              <td>block</td>
+            </tr>
+            <tr>
+              <td>reference before declaration</td>
+              <td>yes</td>
+              <td>no</td>
+              <td>no</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <span>Const: </span> Used when you don't want to reassign the
+          variable. It stays constant once it's declared.
+        </p>
+        <p>
+          <span>Let: </span> After ES6 "let" is more welcome than "var". This is
+          because let is in block scope which means it only exists within its
+          own scope.
+        </p>
+        <p>
+          <span>Var: </span> Old way to declare variable in JS and now the
+          weakest keyword to define a variable. It may or may not be reassigned
+          or be used for entire function.
+        </p>
+        <h2>Data Types</h2>
+        <ul>
+          <li>undefined -> // var x;</li>
+          <li>boolean -> // var x = true;</li>
+          <li>number -> // var x = 5;</li>
+          <li>string -> // var x = 'hello';</li>
+          <li>bigint -> // const x = 123456789n</li>
+          <li>symbol -> // const x = Symbol();</li>
+          <li>null -> // var x = null;</li>
+          <li>object -> // let x = Object();</li>
+          <li>function -> // const x = function(){}</li>
+        </ul>
+        <h2>Data Structures</h2>
+        <img src="https://i.stack.imgur.com/UIwm1.png" alt="array-img" />
+        <p>
+          <span>Array: </span> Stores data in memory for later use. Each array
+          has a fixed number of cells decided on its creation, and each cell has
+          a corresponding numeric index used to select its data.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>Disadvantages</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Simple to create and use</li>
+                  <li>
+                    Foundational building block for complex data structure
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Fixed size</li>
+                  <li>Expensive to insert/delete or resequence values</li>
+                  <li>Inefficient to sort</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Basic spreadsheets</li>
+                  <li>Within complex structures such as hash tables</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img
+          src="https://www.studytonight.com/code/python/ds/images/queue-basic.png"
+          alt="queue-img"
+        />
+        <p>
+          <span>Queues: </span> Old way to declare variable in JS and now the
+          weakest keyword to define a variable. It may or may not be reassigned
+          or be used for entire function.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>Disadvantages</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Dynamic size</li>
+                  <li>Orders data in the order it was received</li>
+                  <li>Low runtime</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Can only retrieve the oldest element</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Effective as a buffer when receiving frequent data</li>
+                  <li>
+                    Convenient way to store order-sensitive data such as stored
+                    voicemails
+                  </li>
+                  <li>Ensures the oldest data is processed first</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img
+          src="https://courses.cs.vt.edu/csonline/DataStructures/Lessons/OrderedListImplementationView/linked_list.gif"
+          alt="linkedlist-img"
+        />
+        <p>
+          <span>Linked list: </span> It doesn't use physical placement of data
+          in memory. It uses a referencing system, elements are stored in nodes
+          that contain a pointer to the next node, repeating until all nodes are
+          linked. It allows efficient insertion and removal of items without the
+          need for reorganization.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>Disadvantages</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Efficient insertion and removal of new elements</li>
+                  <li>Less complex than restructuring an array</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Uses more memory than arrays</li>
+                  <li>Inefficient to retrieve a specific element</li>
+                  <li>Inefficient to traverse the list backwards</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    Best used when data must be added and removen in quick
+                    succession from unknown locations
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img
+          src="https://miro.medium.com/max/303/1*wAsNx2NFmGE6OcG2Obl-8Q.jpeg"
+          alt="trees-img"
+        />
+        <p>
+          <span>Trees: </span> Specialize in representing hierarchical
+          structures. Like a linked list, nodes contain both elements of data
+          and pointers marking its relation to immediate nodes. Each tree has a
+          "root" node. It contains references to all elements below it, which
+          are known as its "child nodes". Each one branches off into more child
+          nodes. E.g. Binary search trees
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>Disadvantages</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Ideal for storing hierarchical relationships</li>
+                  <li>Dynamic size</li>
+                  <li>Quick at insert and delete operations</li>
+                  <li>
+                    In a binary search tree, inserted nodes are sequenced
+                    immediately
+                  </li>
+                  <li>
+                    Binary search trees are efficient at searches, length is
+                    only O (height)
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Slow to rearrange nodes</li>
+                  <li>
+                    Child nodes hold no information about their parent node
+                  </li>
+                  <li>Binary search trees are not as fast as hash tables</li>
+                  <li>
+                    Binary search trees can degenerate into linear search
+                    (scanning all elements) if not implemented with balanced
+                    subtrees
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Storing hierarchical data such as a file location</li>
+                  <li>
+                    Binary search trees are excellent for tasks needing
+                    searching or ordering of data
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img
+          src="https://courses.cs.vt.edu/csonline/DataStructures/Lessons/Graphs/graph.gif"
+          alt="graphs-img"
+        />
+        <p>
+          <span>Graphs: </span> Relation-based data structure helpful for
+          storing web-like relationships. Each node, or vertex, as they're
+          called in graphs, has a title (A,B,C,D,etc.), a value contained
+          within, and a list of links (called edges) it has with other vertices.
+          V = {a,b,c,d} ; E = {ab, ac, bc, cd}.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>Disadvantages</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Can quickly convey visuals over text</li>
+                  <li>
+                    Usable to model a diverse number of subjects so long as they
+                    contain a relational structure
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    At a higher level, text can be time-consuming to convert to
+                    an image
+                  </li>
+                  <li>
+                    It can be dificult to see the existing edges or how many
+                    edges a given vertex has connected to it
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Network representations</li>
+                  <li>Modeling social networks, such as Facebook</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img
+          src="https://www.w3schools.in/wp-content/uploads/2016/09/Data-Structures-Algorithms-Stack.png"
+          alt="stacks-img"
+        />
+        <p>
+          <span>Stacks: </span> The main operations are the addition of an item,
+          known as push, and removal of it, known as pop. Stacks implement a
+          LIFO structure.
+        </p>
+        <img
+          src="https://buzzle.com/images/diagrams/hash-table-data-structure.jpg"
+          alt="hashtable-img"
+        />
+        <p>
+          <span>Hash Tables (Map): </span> Complex data structure capable of
+          storing large amounts of information and retrieving specific elements
+          efficiently. It relies on the concept of key/value pairs, where the
+          "key" is a searched string and the "value" is the data paired with
+          that key. Each searched key is converted from string to a numerical
+          value called "hash", using a predefined hash function. This hash then
+          points to a storage bucket. It then searches the bucket for the
+          originally entered key and returns the values associated with that
+          key.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Advantages</td>
+              <td>Disadvantages</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    Key can be in any form while array's indices must be
+                    integers
+                  </li>
+                  <li>Highly efficient search function</li>
+                  <li>Constant number of operations for each search</li>
+                  <li>Constant cost for insertion or deletion operations</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Collisions: an error caused when 2 keys convert to the same
+                    hash code or 2 hash codes point to the same value
+                  </li>
+                  <li>
+                    These errors can be common and often require an overhaul of
+                    the hash function
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Database storage</li>
+                  <li>Address lookups by name</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>JS type conversions</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Implicit</td>
+              <td>Explicit</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>to string -> // '3' + true</li>
+                  <li>to number -> // '2' - '2'</li>
+                  <li>to NaN -> // 'hello' - 'world'</li>
+                  <li>Boolean to number -> // 4 + false</li>
+                  <li>null to number -> // 4 + null</li>
+                  <li>
+                    undefined with num, bool, null -> // 4 + undefined => NaN
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>to number -> // result = Number('324');</li>
+                  <li>to string -> // result = String(324);</li>
+                  <li>to boolean -> // result = Boolean(0);</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>= vs. == vs. ===</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Operator</td>
+              <td>What is?</td>
+              <td>Why using it?</td>
+            </tr>
+            <tr>
+              <td>'='</td>
+              <td>
+                Equal to (=) is an assignment operator which sets the variable
+                on the left of the = to the value of the expression that is on
+                its right.
+              </td>
+              <td>Assigns values to a variable.</td>
+            </tr>
+            <tr>
+              <td>'=='</td>
+              <td>
+                Double equals (==) is a comparison operator, which transforms
+                the operands having the same type before comparisonl
+              </td>
+              <td>
+                compare the identity of two operands eventhough, they are not of
+                a similar type.
+              </td>
+            </tr>
+            <tr>
+              <td>'==='</td>
+              <td>
+                Triple equals (===) is a strict equality comparison operator,
+                which returns false for the values which are not of a similar
+                type.
+              </td>
+              <td>Check that two values are the same or not.</td>
+            </tr>
+          </tbody>
+        </table>
+        <code></code>
+        <li></li>
+        <li></li>
+        <p></p>
+        <p></p>
+      </section>
+      <!-- JS advanced -->
+      <section id="advanced" class="main-section">
+        <header>Advanced</header>
+        <p></p>
+        <p></p>
+        <code></code>
+        <code></code>
+        <code></code>
+        <li></li>
+        <li></li>
+        <p></p>
+        <p></p>
+      </section>
+      <!-- Built-in browser APIs -->
+      <section id="web_apis" class="main-section">
+        <header>Web APIs</header>
+        <p></p>
+        <p></p>
+        <code></code>
+        <code></code>
+        <code></code>
+        <li></li>
+        <li></li>
+        <p></p>
+        <p></p>
+      </section>
+      <!-- Tooling and miscellaneous -->
+      <section id="tooling_&_misc" class="main-section">
+        <header>Tooling & Misc</header>
+        <p></p>
+        <p></p>
+        <code></code>
+        <code></code>
+        <code></code>
+        <li></li>
+        <li></li>
+        <p></p>
+        <p></p>
+      </section>
+      <!-- Where to go, next steps -->
+      <section id="next_steps" class="main-section">
+        <header>Next Steps</header>
+        <p></p>
+        <p></p>
+        <code></code>
+        <code></code>
+        <code></code>
+        <li></li>
+        <li></li>
+        <p></p>
+        <p></p>
+      </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
