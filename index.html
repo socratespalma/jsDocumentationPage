@@ -502,16 +502,556 @@
             </tr>
           </tbody>
         </table>
-        <code></code>
-        <li></li>
-        <li></li>
-        <p></p>
-        <p></p>
+        <h2>Loops</h2>
+        <p>
+          <span>For: </span> This statement is a type of loop that will use up
+          to three optional expressions to implement the repeated execution of a
+          code block. It is good for working with arrays.
+        </p>
+        <code> for(let i=0; i'<'4; i++){ } </code>
+        <p>
+          <span>For...in: </span> This statement iterates over the properties of
+          an object.
+        </p>
+        <code>
+          const shark = { species: 'great white', collor: 'white',
+          numberOfTeeth: Infinity }
+        </code>
+        <code>
+          for(attribute in shark){ console.log(`${attribute}`.toUpperCase() + `:
+          ${shark[attribute]}`); }
+        </code>
+        <code>
+          Output // SPECIES: great white COLOR: white NUMBEROFTEETH: Infinity
+        </code>
+        <p>
+          <span>For...of: </span> This statement is useful for iterating over
+          iterable objects like arrays and strings. It is a new feature as of
+          ES6. It is good for iterating arrays and strings in the ES6 way.
+        </p>
+        <code>
+          for(let[index,shark] of sharks.entries()){ console.log(index,shark); }
+        </code>
+        <p>
+          <span>While: </span> In this statement the condition is tested at the
+          beginning of the loop. If condition is true, statements inside the
+          loop will execute.
+        </p>
+        <code> let x=7; while(x>7){ // Do something } </code>
+        <p>
+          <span>Do...while: </span> In this statement the condition is tested at
+          the end of the loop. It executes the statements in the code block at
+          least once even if the condition fails.
+        </p>
+        <code> let y=7; do {console.log(y);} while(y>7); </code>
+        <p>
+          <span>Break: </span> It is a statement that can be used to jump out of
+          a loop.
+        </p>
+        <code> for(let i=0; i'<'10; i++){ if(i===3){break;}} </code>
+        <p>
+          <span>Continue: </span> This statement breaks one iteration (in the
+          loop), if a specified condition occurs, and continues with the next
+          iteration in the loop.
+        </p>
+        <h2>Conditional statements</h2>
+        <p>
+          <span>If: </span> Specifies a block of code to be executed, if a
+          specified condition is <strong>true</strong>
+        </p>
+        <p>
+          <span>Else: </span> Specifies a block of code to be executed, if the
+          same condition is <strong>false</strong>
+        </p>
+        <p>
+          <span>Else if: </span> Specifies a new condition to tes, if the first
+          condition is <strong>false</strong>
+        </p>
+        <code>
+          if(grade>=90){ // print something; } else if(grade '<' 90 && grade >=
+          60){ // Print other message; } else { // Print last message; }
+        </code>
+        <p>
+          <span>Switch: </span> This statement is used to perform different
+          actions based on different conditions.
+        </p>
+        <code>
+          switch(x){ case 0: // do something; break; case 1: // do something;
+          break; default: // do something; // It does not need a break because
+          it is the last statement }
+        </code>
+        <h2>Errors</h2>
+        <p><span>Try: </span> Lets you test a block of code for errors.</p>
+        <p><span>Catch: </span> Lets you handle the error</p>
+        <p><span>Throw: </span> Lets you create custom errors.</p>
+        <p>
+          <span>Finally: </span> Lets you execute code, after try and catch,
+          regardless of the result.
+        </p>
+        <code>
+          try { // Block of code to try; // if(something) throw "error message";
+          } catch(err) { // Block of code to handle errors; } finally { // Block
+          of code to be executed regardless of the try/catch result; }
+        </code>
+        <h2>Expressions & Operators</h2>
+        <h3>Assignment Operators</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Shorthand Operator</td>
+              <td>Meaning</td>
+            </tr>
+            <tr>
+              <td>Equal</td>
+              <td>a = b</td>
+              <td>a = b</td>
+            </tr>
+            <tr>
+              <td>Addition Assignment</td>
+              <td>a += b</td>
+              <td>a = a + b</td>
+            </tr>
+            <tr>
+              <td>Subtraction Assignment</td>
+              <td>a -= b</td>
+              <td>a = a - b</td>
+            </tr>
+            <tr>
+              <td>Multiplication Assignment</td>
+              <td>a *= b</td>
+              <td>a = a * b</td>
+            </tr>
+            <tr>
+              <td>Division Assignment</td>
+              <td>a /= b</td>
+              <td>a = a / b</td>
+            </tr>
+            <tr>
+              <td>Remainder Assignment</td>
+              <td>a %= b</td>
+              <td>a = a % b</td>
+            </tr>
+            <tr>
+              <td>Exponentiation Assignment</td>
+              <td>a **= b</td>
+              <td>a = a ** b</td>
+            </tr>
+            <tr>
+              <td>Left Shift Assignment</td>
+              <td>a <<= b</td>
+              <td>a = a << b</td>
+            </tr>
+            <tr>
+              <td>Right Shift Assignment</td>
+              <td>a >>= b</td>
+              <td>a = a >> b</td>
+            </tr>
+            <tr>
+              <td>Bitwise AND Assignment</td>
+              <td>a &= b</td>
+              <td>a = a & b</td>
+            </tr>
+            <tr>
+              <td>Bitwise OR Assignment</td>
+              <td>a |= b</td>
+              <td>a = a | b</td>
+            </tr>
+            <tr>
+              <td>Bitwise XOR Assignment</td>
+              <td>a ^= b</td>
+              <td>a = a ^ b</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Arithmetic Operators</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Syntax</td>
+            </tr>
+            <tr>
+              <td>Addition (+)</td>
+              <td>a + b</td>
+            </tr>
+            <tr>
+              <td>Concatenation (+)</td>
+              <td>a + 'hello'</td>
+            </tr>
+            <tr>
+              <td>Subtraction (-)</td>
+              <td>a - b</td>
+            </tr>
+            <tr>
+              <td>Multiplication (*)</td>
+              <td>a * b</td>
+            </tr>
+            <tr>
+              <td>Division (/)</td>
+              <td>a / b</td>
+            </tr>
+            <tr>
+              <td>Modulus (%)</td>
+              <td>a % b</td>
+            </tr>
+            <tr>
+              <td>Exponentiation (**)</td>
+              <td>a ** b</td>
+            </tr>
+            <tr>
+              <td>Increment (++)</td>
+              <td>a++ / ++a</td>
+            </tr>
+            <tr>
+              <td>Decrement (--)</td>
+              <td>a-- / --a</td>
+            </tr>
+            <tr>
+              <td>Unary (-)</td>
+              <td>-a</td>
+            </tr>
+            <tr>
+              <td>Unary (+)</td>
+              <td>+a</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Logical Operators</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Operator</td>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td>OR</td>
+              <td>||</td>
+              <td>
+                If any argument is true, returns true. Else, returns false.
+              </td>
+            </tr>
+            <tr>
+              <td>AND</td>
+              <td>&&</td>
+              <td>
+                If both operands are truthy, returns true. Else, returns false.
+              </td>
+            </tr>
+            <tr>
+              <td>NOT</td>
+              <td>!</td>
+              <td>
+                Converts the operand to boolean type and returns the inverse
+                value.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Conditional (Ternary) Operator</h3>
+        <h4>Simple</h4>
+        <code> condition ? expressionIfTrue : expressionIfFalse </code>
+        <p>It is equivalent to: if { } else { }</p>
+        <h4>Chains</h4>
+        <code> condition1 ? value1 : condition2 ? value2 : value3; </code>
+        <p>It is equivalent to: if { } else if { } else { }</p>
+        <h3>Comparison Operators</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Operator</td>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td>==</td>
+              <td>Equal to</td>
+            </tr>
+            <tr>
+              <td>===</td>
+              <td>Equal value and type</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>Not equal</td>
+            </tr>
+            <tr>
+              <td>!==</td>
+              <td>Not equal value or type</td>
+            </tr>
+            <tr>
+              <td>></td>
+              <td>Greater than</td>
+            </tr>
+            <tr>
+              <td><</td>
+              <td>Less than</td>
+            </tr>
+            <tr>
+              <td>>=</td>
+              <td>Greater than or equal to</td>
+            </tr>
+            <tr>
+              <td><=</td>
+              <td>Less than or equal to</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Bitwise Operators</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Operator</td>
+              <td>Name</td>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td>&</td>
+              <td>AND</td>
+              <td>Sets each bit to 1 if both are 1</td>
+            </tr>
+            <tr>
+              <td>|</td>
+              <td>OR</td>
+              <td>Sets each bit to 1 if 1/2 bits is 1</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>XOR</td>
+              <td>Sets each bit to 1 if only 1/2 bits is 1</td>
+            </tr>
+            <tr>
+              <td>~</td>
+              <td>NOT</td>
+              <td>Inverts all the bits</td>
+            </tr>
+            <tr>
+              <td><<</td>
+              <td>Zero fill left shift</td>
+              <td>
+                Shifts left by pushing 0s in from the right and let the leftmost
+                bits fall off
+              </td>
+            </tr>
+            <tr>
+              <td>>></td>
+              <td>Signed right shift</td>
+              <td>
+                Shifts right by pushing copies of the leftmost bit in from the
+                left, and let the rightmost bits fall off
+              </td>
+            </tr>
+            <tr>
+              <td>>>></td>
+              <td>Zero fill right shift</td>
+              <td>
+                Shifts right by pushing 0s in from the left, and let the
+                rightmost bits fall off
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Comma Operator (,)</h3>
+        <p>
+          It is used to execute two expressions sequentially. It evaluates each
+          of its operands from left to right first and then value of the last
+          operand will be reurned as the result.
+        </p>
+        <code> leftHandExpression, rightHandExpression </code>
+        <h3>Unary Operators</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Operator</td>
+              <td>Name</td>
+              <td>Explanation</td>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Unary plus</td>
+              <td>Tries to convert the operand into a number</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Unary negation</td>
+              <td>
+                Tries to convert the operand into a number and negates after
+              </td>
+            </tr>
+            <tr>
+              <td>!</td>
+              <td>Logical not</td>
+              <td>Converts to boolean value and then negates it</td>
+            </tr>
+            <tr>
+              <td>++</td>
+              <td>Increment</td>
+              <td>Adds one to its operand</td>
+            </tr>
+            <tr>
+              <td>--</td>
+              <td>Decrement</td>
+              <td>Decrements by one from its operand</td>
+            </tr>
+            <tr>
+              <td>~</td>
+              <td>Bitwise not</td>
+              <td>Inverts all the bits in the operand and returns a number</td>
+            </tr>
+            <tr>
+              <td>none</td>
+              <td>typeof</td>
+              <td>Returns a string which is the type of the operand</td>
+            </tr>
+            <tr>
+              <td>none</td>
+              <td>delete</td>
+              <td>
+                Deletes specific index of an array or specific property of an
+                object
+              </td>
+            </tr>
+            <tr>
+              <td>none</td>
+              <td>void</td>
+              <td>Discards a return value of an expression</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Rest vs. Spread Operator (...)</h3>
+        <p>
+          <strong>Rest operator</strong> helps us to pass infinite number of
+          function arguments.
+        </p>
+        <code>
+          function sum(a, b, ...remaining){ console.log(a); console.log(b);
+          console.log(remaining); } sum(1,2,3,4,5,6,7,8,9);
+        </code>
+        <p>
+          <strong>Spread operator</strong> helps us to expand the strings or
+          array/object literals.
+        </p>
+        <h4>1. Split strings</h4>
+        <code>
+          let x = 'Socrates'; let arrName = [...x]; console.log(arrName); //
+          Output -> ['S','o','c','r','a','t','e','s']
+        </code>
+        <h4>2. Merge arrays</h4>
+        <code>
+          const arr1 = [1,2,3]; const arr2 = [4,5,6]; const mergedArr =
+          [...arr1, ...arr2]; console.log(mergedArr); // Output -> [1,2,3,4,5,6]
+        </code>
+        <h4>3. Merge objects</h4>
+        <code>
+          const obj1 = {a:1, b:2} const obj2 = {c:3, d:4} const mergedObj =
+          {...obj1, ...obj2}; console.log(mergedObj); // Output -> {a:1, b:2,
+          c:3, d:4}
+        </code>
+        <h4>4. Using it in function calls</h4>
+        <code>
+          const nums = [1,2,3]; // function calling sum(...nums); // Output ->
+          1+2+3 = 6
+        </code>
+        <h2>Functions</h2>
+        <h3>Function Declarations (ES5)</h3>
+        <code> function functionName(params) { // code to be executed } </code>
+        <h3>Function Expressions</h3>
+        <code>
+          var x = function(a,b) {return a*b}; var z = x(2,4); // x is an
+          anonymous function (without name)
+        </code>
+        <h3>Arrow Functions (ES6)</h3>
+        <code> const x = (x,y) => {x*y}; </code>
+        <h3>Regular functions vs. Arrow Functions</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Regular Functions</td>
+              <td>Arrow Functions</td>
+            </tr>
+            <tr>
+              <td>Can use "this" keyword</td>
+              <td>Are callable</td>
+            </tr>
+            <tr>
+              <td>Can use "new" keyword (constructible)</td>
+              <td>Less code</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Array Methods</h2>
+        <ul>
+          <li>.toString() -> converts an array to a string</li>
+          <li>.join() -> joins all array elements into a string</li>
+          <li>.pop() -> removes the last element from an array</li>
+          <li>.push() -> adds a new element to an array at the end</li>
+          <li>.shift() -> removes the first array element</li>
+          <li>
+            .unshift() -> adds a new element to the array at the beginning
+          </li>
+          <li>.splice() -> can be used to add new items to an array</li>
+          <li>.concat() -> creates a new array by merging existing arrays</li>
+          <li>.slice() -> slices out a piece of an array into a new array</li>
+          <li>.sort() -> sorts an array alphabetically</li>
+          <li>.reverse() -> reverses the elements in an array</li>
+          <li>.forEach() -> calls a function once for each array element</li>
+          <li>
+            .map() -> creates a new array by performing a function on each
+            element
+          </li>
+          <li>
+            .filter() -> creates a new array with array elements that passes a
+            test
+          </li>
+          <li>
+            .reduce() -> runs a function on each array element to reduce to a
+            single value
+          </li>
+          <li>.reduceRight() -> same as .reduce()</li>
+          <li>.every() -> ched if all array values pass a test</li>
+          <li>.some() -> check if some array values pass a test</li>
+          <li>
+            .indexOf() -> searches an array for an element value and returns it
+            position
+          </li>
+          <li>.lastIndexOf() -> same as .indexOf()</li>
+          <li>
+            .find() -> returns value of the first array element that passes a
+            test function
+          </li>
+          <li>
+            .findIndex() -> returns index of the first array element that passes
+            a test function
+          </li>
+        </ul>
+        <h2>Destructuring</h2>
+        <p>
+          Lets unpack values from arrays, or properties from objects, into
+          distinct variables
+        </p>
+        <code> let a, b, rest; [a, b, ...rest] = [10, 20, 30, 40, 50]; </code>
       </section>
       <!-- JS advanced -->
       <section id="advanced" class="main-section">
         <header>Advanced</header>
-        <p></p>
+        <p>
+          <strong>Closure: </strong> Gives you access to an outer function's
+          scope from an inner function.
+        </p>
+        <img
+          src="http://www.jomendez.com/wp-content/uploads/2015/11/javascript-closure1.png"
+          alt="closure-img"
+        />
+        <p>
+          <strong>Currying: </strong> Advanced technique of working with
+          functions. Transforms a function from callable as f(a,b,c) into
+          callable as f(a)(b)(c). Currying does not call a function. It just
+          transforms it.
+        </p>
+        <img
+          src="https://miro.medium.com/max/2832/1*wRWT8kGbP5wxlGtrTcAALA.png"
+          alt="currying-img"
+        />
         <p></p>
         <code></code>
         <code></code>
