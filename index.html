@@ -1052,7 +1052,82 @@
           src="https://miro.medium.com/max/2832/1*wRWT8kGbP5wxlGtrTcAALA.png"
           alt="currying-img"
         />
-        <p></p>
+        <h2>"This" keyword</h2>
+        <p>
+          Refers to the object it belongs to. It has different values depending
+          on where it is used:
+        </p>
+        <ul>
+          <li>
+            In a <strong>method</strong>, "this" refers to the owner object
+          </li>
+          <li><strong>Alone</strong>, "this" refers to the global object</li>
+          <li>
+            In a <strong>function</strong>, "this" refers to the global object
+          </li>
+          <li>
+            In a function, in <strong>strict mode</strong>, "this" is undefined
+          </li>
+          <li>
+            In an <strong>event</strong>, "this" refers to the element that
+            received the event
+          </li>
+          <li>
+            Methods like call(), and apply() can refer "this" to any object
+          </li>
+        </ul>
+        <p>
+          <strong>Implicit Binding: </strong> Check what's to the left of the
+          dot (.) operator adjacent to a function at invocation time. This
+          determines what "this" is binding to.
+        </p>
+        <p>
+          <strong>Explicit Binding: </strong> Call a function with an object
+          when the function is outside of the execution context of the object.
+        </p>
+        <ul>
+          <li>
+            <strong>call():</strong> The context with wich the function has to
+            be called will be passed as a parameter to the call().
+            <strong>This</strong> is determined by what has been passed to the
+            call() method.
+          </li>
+          <li>
+            <strong>apply():</strong> It is the same as call() but allows you to
+            pass the arguments more conveniently. Ideal when you have multiple
+            value arguments to pass.
+          </li>
+          <li>
+            <strong>bind():</strong> Similar to call() but it returns a brand
+            new function and we can invoke that instead.
+          </li>
+        </ul>
+        <p>
+          <strong>new Binding: </strong> Used to create an object from the
+          constructor function. When a function is invoked with the new keyword,
+          JS creates an internal "this" object within the function. The newly
+          created "this" binds to the object being created using the "new"
+          keyword.
+        </p>
+        <p>
+          <strong>Global Object Binding: </strong> If "this" keyword is not
+          resolved with any of the bindings, implicit, explicit or new, then it
+          it bound to the window (global) object. Except in 'strict mode'.
+        </p>
+        <p>
+          <strong>HTML Event Element Binding: </strong> In HTML event handlers,
+          "this" keyword binds to the HTML elements that receive the event.
+        </p>
+        <h2>Prototype</h2>
+        <p>
+          <strong>Inheritance: </strong> All JS objects inherit properties and
+          methods from a prototype. These inherit from Object.prototype.
+        </p>
+        <ul>
+          <li>Date object inherits from Date.prototype</li>
+          <li>Array object inherits from Array.prototype</li>
+          <li>Person object inherits from Person.prototype</li>
+        </ul>
         <code></code>
         <code></code>
         <code></code>
