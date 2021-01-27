@@ -1268,18 +1268,138 @@
           src="https://image.slidesharecdn.com/asynchistory-170422024901/95/async-history-javascript-19-638.jpg"
           alt="asyncawait-img"
         />
-        <li></li>
-        <li></li>
-        <p></p>
-        <p></p>
       </section>
       <!-- Built-in browser APIs -->
       <section id="web_apis" class="main-section">
         <header>Web APIs</header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <code></code>
+        <h2>DOM</h2>
+        <ul>
+          <li>document.getElementsByName("name");</li>
+          <li>document.getElementById("id");</li>
+          <li>document.getElementsByClassName("class");</li>
+          <li>document.querySelector("css selector");</li>
+          <li>document.querySelectorAll("css selector");</li>
+          <li>document.createElement("tag");</li>
+          <li>
+            <strong>classlist(.add/.remove/.toggle):</strong> Is a readonly list
+            that contains classes for a given element
+          </li>
+          <li>
+            <strong>textContent:</strong> Returns a string of the test given in
+            a single element.
+          </li>
+          <li>
+            <strong>innerHTML:</strong> Returns a string of all HTML given in a
+            single element
+          </li>
+          <li><strong>getAttribute():</strong> Read attributes</li>
+          <li><strong>setAttribute():</strong> Write attributes</li>
+          <li>.appendChild(element);</li>
+          <li>.insertBefore(newElement, otherElement);</li>
+          <li>.remove();</li>
+          <li>.parentNode;</li>
+          <li>.children;</li>
+          <li>.firstElementChild;</li>
+          <li>.lastElementChild;</li>
+          <li>.nextElementSibling</li>
+          <li>.id</li>
+          <li>.createTextNode</li>
+          <li>
+            .addEventListener(event, functionCall);
+            <ul>
+              <li>Keypress, Keydown, Keyup</li>
+              <li>Mousedown, Mouseup, Mouseenter, Mouseleave,</li>
+              <li>Mouseover, Mouseout, Mousemove</li>
+              <li>Click, Dblclick, Focus, Submit</li>
+              <li>Blur, Cut, Paste, Input, Change</li>
+            </ul>
+          </li>
+        </ul>
+        <h2>AJAX & XHR</h2>
+        <p>
+          Asynchronous JS And XML. Is a set of web technologies. It sends and
+          receives data asynchronously. Does not interfere with current web
+          page. JSON has replaced XML for the most part.
+        </p>
+        <img
+          src="https://netbeans.org/images_www/articles/73/web/ajax-intro/ajax-process-flow.png"
+          alt="ajaxxhr-img"
+        />
+        <p>
+          <strong>XmlHttpRequest(XHR) Object:</strong> API in the form of
+          object. Provided by the browser's JS environment. Methods transfer
+          data between client/server. Can be used with other protocols than
+          HTTP. Can work with data other than XML (JSON, plain text).
+        </p>
+        <h3>Libraries & Other Methods</h3>
+        <ul>
+          <li>jQuery</li>
+          <li>Axios</li>
+          <li>Superagent</li>
+          <li>Fetch API</li>
+          <li>Prototype</li>
+          <li>Node HTTP</li>
+        </ul>
+        <h3>Common way (.onload)</h3>
+        <code>
+          xhr.open('GET', 'sample.txt', true); xhr.onload = function() {
+          if(this.status == 200){ console.log(this.responseText); } }
+          xhr.send();
+        </code>
+        <h3>Old way (.onreadystatechange)</h3>
+        <code>
+          xhr.onreadystatechange = function() { if(this.readyState == 4 &&
+          this.status == 200){ console.log(this.responseText); } }
+        </code>
+        <p>
+          <strong>HTTP Status:</strong> 200: 'OK', 403: 'Forbidden', 404: 'Not
+          Found'
+        </p>
+        <p>
+          <strong>Ready state value:</strong> 0 - Request not initialized, 1 -
+          Server connection established, 2 - Request received, 3 - Processing
+          request, 4 - Request finished & response is ready.
+        </p>
+        <h3>Onload vs. Onreadystatechange</h3>
+        <p>
+          Onload is not going to run unless it is ready (1 -> 4) whereas
+          Onreadystatechange runs anyway (1,2,3,4)
+        </p>
+        <p>
+          <strong>Onprogress</strong> (optional - used for loaders),
+          <strong>Onerror</strong> (optional - handle errors).
+        </p>
+        <h3>Uses</h3>
+        <ul>
+          <li>Load local JSON file</li>
+          <li>Load external API</li>
+          <li>Forms with PHP</li>
+          <li>Fetch from database</li>
+        </ul>
+        <h2>Fetch API</h2>
+        <p>
+          Allows web browser to make HTTP requests to web server in a simpler
+          way than the XHR Object
+        </p>
+        <img
+          src="https://appdividend.com/wp-content/uploads/2018/08/fetch-api-example-tutorial.png"
+          alt="fetchapi-img"
+        />
+        <h2>Storage</h2>
+        <p>
+          <strong>Local Storage:</strong> allows you to store, read, add,
+          modify, and delete data items for a domain.
+        </p>
+        <ul>
+          <li>
+            <strong>setItem():</strong> stores a data item in a storage. Takes
+            "name" and "value" as parameters
+          </li>
+          <li>
+            <strong>getItem():</strong> retrieves a data item from the storage.
+            Takes a "name" as a parameter
+          </li>
+        </ul>
         <code></code>
         <li></li>
         <li></li>
