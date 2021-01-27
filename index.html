@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
     <title>JS Documentation</title>
   </head>
   <body>
     <nav id="navbar">
-      <header>
-        <h1>JS Documentation</h1>
-      </header>
+      <header>JS Documentation</header>
       <a href="#fundamentals" class="nav-link">Fundamentals</a>
       <a href="#advanced" class="nav-link">Advanced</a>
       <a href="#web_apis" class="nav-link">Web APIs</a>
@@ -1400,37 +1404,96 @@
             Takes a "name" as a parameter
           </li>
         </ul>
-        <code></code>
-        <li></li>
-        <li></li>
-        <p></p>
-        <p></p>
+        <p>
+          <strong>Session Storage:</strong> identical to local storage but
+          stores data for one session. Data is deleted when browser is closed.
+        </p>
+        <ul>
+          <li><strong>setItem():</strong> same as local storage</li>
+          <li><strong>getItem():</strong> same as local storage</li>
+        </ul>
+        <h3>Other properties and methods</h3>
+        <ul>
+          <li>
+            <strong>key(n):</strong> returns name of nth key in the storage
+          </li>
+          <li>
+            <strong>length:</strong> returns the number of data items stored in
+            the storage object
+          </li>
+          <li>
+            <strong>removeItem(keyName):</strong> removes that key from the
+            storage
+          </li>
+          <li><strong>clear():</strong> empty all key out of the storage</li>
+        </ul>
+        <h2>Video and audio</h2>
+        <h3>HTML media element</h3>
+        <p>It is basically the video and audio HTML tags.</p>
+        <h3>Web Audio API</h3>
+        <p>
+          Gives developers access to features found in specialized applications
+          like DAWs, Game Audio Engines such as:
+        </p>
+        <ul>
+          <li>
+            <strong>Synthesis:</strong> generating sounds, building instruments,
+            manipulating sound using effects
+          </li>
+          <li>
+            <strong>Analysis:</strong> monitor frequency and time data, speech
+            recognition, pitch/rhythm detection
+          </li>
+          <li>
+            <strong>Visualization:</strong> using frequency and time data to
+            dinamically generate graphs based on audio playback
+          </li>
+          <li>
+            <strong>Spatialization:</strong> Simulating acoustics in a 2D or 3D
+            environment, adjusting audio based on positions of listener and
+            sound sources, typically used in games
+          </li>
+        </ul>
+        <h3>WebRTC API</h3>
+        <p>
+          Web Real-Time Communication. Allows direct connection between
+          browsers. In this model clients and server are comunicating with each
+          other but also clients can communicate themselves without the need of
+          the server, this is done thanks to "signaling". Here are some reasons
+          to use WebRTC:
+        </p>
+        <ul>
+          <li>Removes the need for extra apps</li>
+          <li>Embedded in web technologies</li>
+          <li>Secure (Encription)</li>
+          <li>Used on video and audio streaming apps like Spotify and Zoom</li>
+        </ul>
+        <h3>Canvas API</h3>
+        <ul>
+          <li>You can draw graphics and text</li>
+          <li>Can implement animations</li>
+          <li>Good for web games in browser</li>
+          <li>Just use the canvas HTML tag</li>
+        </ul>
       </section>
       <!-- Tooling and miscellaneous -->
       <section id="tooling_&_misc" class="main-section">
         <header>Tooling & Misc</header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <code></code>
-        <code></code>
-        <li></li>
-        <li></li>
-        <p></p>
-        <p></p>
+        <ul>
+          <li><strong>Linters:</strong> ESlint</li>
+          <li><strong>Code formaters:</strong> Prettier</li>
+          <li><strong>Bundlers:</strong> Webpack, Parcel</li>
+          <li><strong>Extra:</strong> TypeScript</li>
+        </ul>
       </section>
       <!-- Where to go, next steps -->
       <section id="next_steps" class="main-section">
         <header>Next Steps</header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <code></code>
-        <code></code>
-        <li></li>
-        <li></li>
-        <p></p>
-        <p></p>
+        <p>
+          Build vanilla HTML, CSS and JS projects without using frameworks or
+          pre-processors like SASS. Then learn a JS framework like React, Vue or
+          Angular.
+        </p>
       </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
