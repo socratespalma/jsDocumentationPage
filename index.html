@@ -1128,9 +1128,146 @@
           <li>Array object inherits from Array.prototype</li>
           <li>Person object inherits from Person.prototype</li>
         </ul>
-        <code></code>
-        <code></code>
-        <code></code>
+        <h3>Add props and methods to object</h3>
+        <code>
+          function Person(first, last, age, eyecolor) { this.firstname = first;
+          this.lastname = last; this.age = age; this.eyecolor = eyecolor; }
+        </code>
+        <p>Adding property</p>
+        <code>Person.prototype.nationality = 'English';</code>
+        <p>Adding method</p>
+        <code
+          >Person.prototype.name = function() { return this.firstname + ' ' +
+          this.lastname; }
+        </code>
+        <h2>Class</h2>
+        <code>
+          class Car { constructor(name, year) { this.name = name; this.year =
+          year; } }
+        </code>
+        <h3>The constructor method</h3>
+        <ul>
+          <li>It has to have the exact name "constructor"</li>
+          <li>Executed automatically when a new object is created</li>
+          <li>Used to initialize object properties</li>
+        </ul>
+        <h3>Class methods</h3>
+        <code>
+          class ClassName{ constructor(){...} method1(){...} method2(){...} }
+        </code>
+        <h2>Iterators</h2>
+        <ul>
+          <li>for...of cycle (accepts iterables)</li>
+          <li>Spread operator [...iterable]</li>
+          <li>Array destructuring -> const[first, ...rest] = []</li>
+          <li>Array.from() -> Array.from(iterable[mapfunc])</li>
+        </ul>
+        <h2>Native iterable types</h2>
+        <ul>
+          <li>iterable array</li>
+          <li>iterable string</li>
+          <li>iterable Map -> overkey and value pairs</li>
+          <li>iterable Set -> over its items</li>
+        </ul>
+        <h2>Generators</h2>
+        <p>
+          <strong>Generator function:</strong> Can return (yield) multiple
+          values. It returns an object generator.
+        </p>
+        <code
+          >function* generateSequence() { yield 1; yield 2; return 3; }
+        </code>
+        <p>
+          <strong>.next():</strong> Runs execution until nearest yield<>
+          statement. Then it pauses and returns yielded value to the outer code.
+          It returns an object with 2 props (value: val, done: boolean).
+        </p>
+        <ul>
+          <li>Generators are iterable (*[Symbol.iterator]())</li>
+          <li>Generator composition (yield*)</li>
+          <li>Generator.throw(err)</li>
+        </ul>
+        <h2>Event loop</h2>
+        <p>JS is single threaded. Memory allocation.</p>
+        <p>
+          <strong>Heap memory:</strong> Data stored randomly and memory
+          allocated.
+        </p>
+        <p>
+          <strong>Stack memory:</strong> Memory allocated in stacks. Mainly used
+          for functions.
+        </p>
+        <p>
+          <strong>Function call stack:</strong> A function which keeps track of
+          all other functions executed in runtime.
+        </p>
+        <p>
+          <strong>Event loop:</strong> Something that pulls stuff out of the
+          queue and places it onto the function execution stack whenever the
+          function stack becomes empty.
+        </p>
+        <p>
+          The event loop is the secret by which JS gives an illusion of being
+          multithreaded even though it's single-threaded.
+        </p>
+        <img src="https://i.stack.imgur.com/BTm1H.png" alt="eventloop-img" />
+        <h2>Immediately Invoked Function Expression - IIFE</h2>
+        <code> (function() { //Write JS code here } )(); </code>
+        <h3>Advantages:</h3>
+        <ul>
+          <li>Do not create unnecessary global variables and functions</li>
+          <li>
+            Functions and variables defined in IIFE do not conflict with other
+            functions & variables even if they have the same name
+          </li>
+          <li>Organize JS code</li>
+          <li>Make JS code maintainable</li>
+        </ul>
+        <h2>Asynchronous JS</h2>
+        <p>
+          <strong>setTimeOut():</strong> calls a function or evaluates an
+          expression after a specified number of milliseconds. 1000 ms = 1
+          second. Function is executed once. clearTimeOut() prevents the
+          function from running.
+        </p>
+        <code>setTimeOut(function, milliseconds, param1, param2, ...)</code>
+        <p>
+          <strong>setInterval():</strong> calls a function or evaluates an
+          expression at specified intervals (in milliseconds). This method will
+          continue calling the function until clearInterval() is called or
+          window is closed.
+        </p>
+        <code>setInterval(function, milliseconds, param1, param2, ...)</code>
+        <p>
+          <strong>callbacks:</strong> function passed as an argument to another
+          function. This allows a function to call another function. A callback
+          function can run after another function has finished.
+        </p>
+        <code>
+          function myFunc1(some) { // some code } function myFunc2(par1, par2,
+          myCallback) { // some code myCallback(); } myFunc2(5, 5, myFunc1);
+        </code>
+        <p>
+          <strong>promises:</strong> Is a JS object that links code that can
+          take some time (producing code) and code that must wait for the result
+          (consuming code).
+        </p>
+        <h3>Promise Object Properties: (state / result)</h3>
+        <ul>
+          <li>Pending -> undefined</li>
+          <li>Fulfilled -> a value</li>
+          <li>Rejected -> an error object</li>
+        </ul>
+        <img
+          src="https://appdividend.com/wp-content/uploads/2018/10/Getting-Started-With-Javascript-Promise.png"
+          alt="promise-img"
+        />
+        <p><strong>Async:</strong> Makes a function return a promise</p>
+        <p><strong>Await:</strong> Makes a function wait for a promise</p>
+        <img
+          src="https://image.slidesharecdn.com/asynchistory-170422024901/95/async-history-javascript-19-638.jpg"
+          alt="asyncawait-img"
+        />
         <li></li>
         <li></li>
         <p></p>
