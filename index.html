@@ -28,18 +28,27 @@
           The script tag always goes before closing the body tag in the HTML
           file.
         </p>
+        <h2>Scope</h2>
         <p>
-          <span>Scope: </span>Defines where variables and functions are
-          accesible inside of your program.
+          Defines where variables and functions are accesible inside of your
+          program.
         </p>
-        <h2>Global Scope</h2>
-        <code> var fruit = 'apple'; console.log(fruit); </code>
-        <h2>Local Scope</h2>
+        <h3 class="gl-scope-header">Global Scope</h3>
+        <div class="code-sect">
+          <pre><code>var fruit = 'apple'; 
+console.log(fruit);</code></pre>
+        </div>
+        <h3 class="lcl-scope-header">Local Scope</h3>
         <p>
           <span>Function scope: </span><strong>var</strong> defines function
           scope within the function. It cannot be accessed outside from it.
         </p>
-        <code> function getDate(){ var date = new Date(); return date; } </code>
+        <div class="code-sect">
+          <pre><code>function getDate() {
+        var date = new Date();
+        return date;
+}</code></pre>
+        </div>
         <p>
           <span>Block scope: </span><strong>const</strong> and
           <strong>let</strong> define block scope. Is the area within if,
@@ -50,11 +59,19 @@
           <span>Lexical scope: </span> Children scope have access to the parent
           scope
         </p>
-        <code>
-          function foo1(){ var fruit1 = 'apple'; const fruit2 = 'banana'; let
-          fruit3 = 'strawberry'; function foo2(){ console.log(`Fruits are:
-          ${fruit1}, ${fruit2} and ${fruit3}`); } foo2();} foo1();
-        </code>
+        <div class="code-sect">
+          <pre><code>function foo1() {
+      var fruit1 = 'apple';
+      const fruit2 = 'banana';
+      let fruit3 = 'strawberry';
+      function foo2() { 
+            console.log(`Fruits are: ${fruit1}, ${fruit2} and ${fruit3}`);
+      }
+      foo2();
+}
+foo1();
+          </code></pre>
+        </div>
         <p>
           <span>Hoisting: </span>JS mechanism where variables and function
           declarations are moved to the top of their scope before code
@@ -64,7 +81,7 @@
         <table>
           <tbody>
             <tr>
-              <td></td>
+              <td>state</td>
               <td>var</td>
               <td>let</td>
               <td>const</td>
@@ -104,17 +121,19 @@
           or be used for entire function.
         </p>
         <h2>Data Types</h2>
-        <ul>
-          <li>undefined -> // var x;</li>
-          <li>boolean -> // var x = true;</li>
-          <li>number -> // var x = 5;</li>
-          <li>string -> // var x = 'hello';</li>
-          <li>bigint -> // const x = 123456789n</li>
-          <li>symbol -> // const x = Symbol();</li>
-          <li>null -> // var x = null;</li>
-          <li>object -> // let x = Object();</li>
-          <li>function -> // const x = function(){}</li>
-        </ul>
+        <div>
+          <ul>
+            <li>undefined -> // var x;</li>
+            <li>boolean -> // var x = true;</li>
+            <li>number -> // var x = 5;</li>
+            <li>string -> // var x = 'hello';</li>
+            <li>bigint -> // const x = 123456789n</li>
+            <li>symbol -> // const x = Symbol();</li>
+            <li>null -> // var x = null;</li>
+            <li>object -> // let x = Object();</li>
+            <li>function -> // const x = function(){}</li>
+          </ul>
+        </div>
         <h2>Data Structures</h2>
         <img src="https://i.stack.imgur.com/UIwm1.png" alt="array-img" />
         <p>
@@ -147,6 +166,7 @@
             </tr>
             <tr>
               <td>Applications</td>
+              <td></td>
             </tr>
             <tr>
               <td>
@@ -155,6 +175,7 @@
                   <li>Within complex structures such as hash tables</li>
                 </ul>
               </td>
+              <td></td>
             </tr>
           </tbody>
         </table>
@@ -984,50 +1005,52 @@
           </tbody>
         </table>
         <h2>Array Methods</h2>
-        <ul>
-          <li>.toString() -> converts an array to a string</li>
-          <li>.join() -> joins all array elements into a string</li>
-          <li>.pop() -> removes the last element from an array</li>
-          <li>.push() -> adds a new element to an array at the end</li>
-          <li>.shift() -> removes the first array element</li>
-          <li>
-            .unshift() -> adds a new element to the array at the beginning
-          </li>
-          <li>.splice() -> can be used to add new items to an array</li>
-          <li>.concat() -> creates a new array by merging existing arrays</li>
-          <li>.slice() -> slices out a piece of an array into a new array</li>
-          <li>.sort() -> sorts an array alphabetically</li>
-          <li>.reverse() -> reverses the elements in an array</li>
-          <li>.forEach() -> calls a function once for each array element</li>
-          <li>
-            .map() -> creates a new array by performing a function on each
-            element
-          </li>
-          <li>
-            .filter() -> creates a new array with array elements that passes a
-            test
-          </li>
-          <li>
-            .reduce() -> runs a function on each array element to reduce to a
-            single value
-          </li>
-          <li>.reduceRight() -> same as .reduce()</li>
-          <li>.every() -> ched if all array values pass a test</li>
-          <li>.some() -> check if some array values pass a test</li>
-          <li>
-            .indexOf() -> searches an array for an element value and returns it
-            position
-          </li>
-          <li>.lastIndexOf() -> same as .indexOf()</li>
-          <li>
-            .find() -> returns value of the first array element that passes a
-            test function
-          </li>
-          <li>
-            .findIndex() -> returns index of the first array element that passes
-            a test function
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>.toString() -> converts an array to a string</li>
+            <li>.join() -> joins all array elements into a string</li>
+            <li>.pop() -> removes the last element from an array</li>
+            <li>.push() -> adds a new element to an array at the end</li>
+            <li>.shift() -> removes the first array element</li>
+            <li>
+              .unshift() -> adds a new element to the array at the beginning
+            </li>
+            <li>.splice() -> can be used to add new items to an array</li>
+            <li>.concat() -> creates a new array by merging existing arrays</li>
+            <li>.slice() -> slices out a piece of an array into a new array</li>
+            <li>.sort() -> sorts an array alphabetically</li>
+            <li>.reverse() -> reverses the elements in an array</li>
+            <li>.forEach() -> calls a function once for each array element</li>
+            <li>
+              .map() -> creates a new array by performing a function on each
+              element
+            </li>
+            <li>
+              .filter() -> creates a new array with array elements that passes a
+              test
+            </li>
+            <li>
+              .reduce() -> runs a function on each array element to reduce to a
+              single value
+            </li>
+            <li>.reduceRight() -> same as .reduce()</li>
+            <li>.every() -> ched if all array values pass a test</li>
+            <li>.some() -> check if some array values pass a test</li>
+            <li>
+              .indexOf() -> searches an array for an element value and returns
+              it position
+            </li>
+            <li>.lastIndexOf() -> same as .indexOf()</li>
+            <li>
+              .find() -> returns value of the first array element that passes a
+              test function
+            </li>
+            <li>
+              .findIndex() -> returns index of the first array element that
+              passes a test function
+            </li>
+          </ul>
+        </div>
         <h2>Destructuring</h2>
         <p>
           Lets unpack values from arrays, or properties from objects, into
@@ -1061,25 +1084,28 @@
           Refers to the object it belongs to. It has different values depending
           on where it is used:
         </p>
-        <ul>
-          <li>
-            In a <strong>method</strong>, "this" refers to the owner object
-          </li>
-          <li><strong>Alone</strong>, "this" refers to the global object</li>
-          <li>
-            In a <strong>function</strong>, "this" refers to the global object
-          </li>
-          <li>
-            In a function, in <strong>strict mode</strong>, "this" is undefined
-          </li>
-          <li>
-            In an <strong>event</strong>, "this" refers to the element that
-            received the event
-          </li>
-          <li>
-            Methods like call(), and apply() can refer "this" to any object
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              In a <strong>method</strong>, "this" refers to the owner object
+            </li>
+            <li><strong>Alone</strong>, "this" refers to the global object</li>
+            <li>
+              In a <strong>function</strong>, "this" refers to the global object
+            </li>
+            <li>
+              In a function, in <strong>strict mode</strong>, "this" is
+              undefined
+            </li>
+            <li>
+              In an <strong>event</strong>, "this" refers to the element that
+              received the event
+            </li>
+            <li>
+              Methods like call(), and apply() can refer "this" to any object
+            </li>
+          </ul>
+        </div>
         <p>
           <strong>Implicit Binding: </strong> Check what's to the left of the
           dot (.) operator adjacent to a function at invocation time. This
@@ -1089,23 +1115,25 @@
           <strong>Explicit Binding: </strong> Call a function with an object
           when the function is outside of the execution context of the object.
         </p>
-        <ul>
-          <li>
-            <strong>call():</strong> The context with wich the function has to
-            be called will be passed as a parameter to the call().
-            <strong>This</strong> is determined by what has been passed to the
-            call() method.
-          </li>
-          <li>
-            <strong>apply():</strong> It is the same as call() but allows you to
-            pass the arguments more conveniently. Ideal when you have multiple
-            value arguments to pass.
-          </li>
-          <li>
-            <strong>bind():</strong> Similar to call() but it returns a brand
-            new function and we can invoke that instead.
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <strong>call():</strong> The context with wich the function has to
+              be called will be passed as a parameter to the call().
+              <strong>This</strong> is determined by what has been passed to the
+              call() method.
+            </li>
+            <li>
+              <strong>apply():</strong> It is the same as call() but allows you
+              to pass the arguments more conveniently. Ideal when you have
+              multiple value arguments to pass.
+            </li>
+            <li>
+              <strong>bind():</strong> Similar to call() but it returns a brand
+              new function and we can invoke that instead.
+            </li>
+          </ul>
+        </div>
         <p>
           <strong>new Binding: </strong> Used to create an object from the
           constructor function. When a function is invoked with the new keyword,
@@ -1127,11 +1155,13 @@
           <strong>Inheritance: </strong> All JS objects inherit properties and
           methods from a prototype. These inherit from Object.prototype.
         </p>
-        <ul>
-          <li>Date object inherits from Date.prototype</li>
-          <li>Array object inherits from Array.prototype</li>
-          <li>Person object inherits from Person.prototype</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Date object inherits from Date.prototype</li>
+            <li>Array object inherits from Array.prototype</li>
+            <li>Person object inherits from Person.prototype</li>
+          </ul>
+        </div>
         <h3>Add props and methods to object</h3>
         <code>
           function Person(first, last, age, eyecolor) { this.firstname = first;
@@ -1150,29 +1180,35 @@
           year; } }
         </code>
         <h3>The constructor method</h3>
-        <ul>
-          <li>It has to have the exact name "constructor"</li>
-          <li>Executed automatically when a new object is created</li>
-          <li>Used to initialize object properties</li>
-        </ul>
+        <div>
+          <ul>
+            <li>It has to have the exact name "constructor"</li>
+            <li>Executed automatically when a new object is created</li>
+            <li>Used to initialize object properties</li>
+          </ul>
+        </div>
         <h3>Class methods</h3>
         <code>
           class ClassName{ constructor(){...} method1(){...} method2(){...} }
         </code>
         <h2>Iterators</h2>
-        <ul>
-          <li>for...of cycle (accepts iterables)</li>
-          <li>Spread operator [...iterable]</li>
-          <li>Array destructuring -> const[first, ...rest] = []</li>
-          <li>Array.from() -> Array.from(iterable[mapfunc])</li>
-        </ul>
+        <div>
+          <ul>
+            <li>for...of cycle (accepts iterables)</li>
+            <li>Spread operator [...iterable]</li>
+            <li>Array destructuring -> const[first, ...rest] = []</li>
+            <li>Array.from() -> Array.from(iterable[mapfunc])</li>
+          </ul>
+        </div>
         <h2>Native iterable types</h2>
-        <ul>
-          <li>iterable array</li>
-          <li>iterable string</li>
-          <li>iterable Map -> overkey and value pairs</li>
-          <li>iterable Set -> over its items</li>
-        </ul>
+        <div>
+          <ul>
+            <li>iterable array</li>
+            <li>iterable string</li>
+            <li>iterable Map -> overkey and value pairs</li>
+            <li>iterable Set -> over its items</li>
+          </ul>
+        </div>
         <h2>Generators</h2>
         <p>
           <strong>Generator function:</strong> Can return (yield) multiple
@@ -1186,11 +1222,13 @@
           statement. Then it pauses and returns yielded value to the outer code.
           It returns an object with 2 props (value: val, done: boolean).
         </p>
-        <ul>
-          <li>Generators are iterable (*[Symbol.iterator]())</li>
-          <li>Generator composition (yield*)</li>
-          <li>Generator.throw(err)</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Generators are iterable (*[Symbol.iterator]())</li>
+            <li>Generator composition (yield*)</li>
+            <li>Generator.throw(err)</li>
+          </ul>
+        </div>
         <h2>Event loop</h2>
         <p>JS is single threaded. Memory allocation.</p>
         <p>
@@ -1218,15 +1256,17 @@
         <h2>Immediately Invoked Function Expression - IIFE</h2>
         <code> (function() { //Write JS code here } )(); </code>
         <h3>Advantages:</h3>
-        <ul>
-          <li>Do not create unnecessary global variables and functions</li>
-          <li>
-            Functions and variables defined in IIFE do not conflict with other
-            functions & variables even if they have the same name
-          </li>
-          <li>Organize JS code</li>
-          <li>Make JS code maintainable</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Do not create unnecessary global variables and functions</li>
+            <li>
+              Functions and variables defined in IIFE do not conflict with other
+              functions & variables even if they have the same name
+            </li>
+            <li>Organize JS code</li>
+            <li>Make JS code maintainable</li>
+          </ul>
+        </div>
         <h2>Asynchronous JS</h2>
         <p>
           <strong>setTimeOut():</strong> calls a function or evaluates an
@@ -1257,11 +1297,13 @@
           (consuming code).
         </p>
         <h3>Promise Object Properties: (state / result)</h3>
-        <ul>
-          <li>Pending -> undefined</li>
-          <li>Fulfilled -> a value</li>
-          <li>Rejected -> an error object</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Pending -> undefined</li>
+            <li>Fulfilled -> a value</li>
+            <li>Rejected -> an error object</li>
+          </ul>
+        </div>
         <img
           src="https://appdividend.com/wp-content/uploads/2018/10/Getting-Started-With-Javascript-Promise.png"
           alt="promise-img"
@@ -1277,48 +1319,50 @@
       <section id="web_apis" class="main-section">
         <header>Web APIs</header>
         <h2>DOM</h2>
-        <ul>
-          <li>document.getElementsByName("name");</li>
-          <li>document.getElementById("id");</li>
-          <li>document.getElementsByClassName("class");</li>
-          <li>document.querySelector("css selector");</li>
-          <li>document.querySelectorAll("css selector");</li>
-          <li>document.createElement("tag");</li>
-          <li>
-            <strong>classlist(.add/.remove/.toggle):</strong> Is a readonly list
-            that contains classes for a given element
-          </li>
-          <li>
-            <strong>textContent:</strong> Returns a string of the test given in
-            a single element.
-          </li>
-          <li>
-            <strong>innerHTML:</strong> Returns a string of all HTML given in a
-            single element
-          </li>
-          <li><strong>getAttribute():</strong> Read attributes</li>
-          <li><strong>setAttribute():</strong> Write attributes</li>
-          <li>.appendChild(element);</li>
-          <li>.insertBefore(newElement, otherElement);</li>
-          <li>.remove();</li>
-          <li>.parentNode;</li>
-          <li>.children;</li>
-          <li>.firstElementChild;</li>
-          <li>.lastElementChild;</li>
-          <li>.nextElementSibling</li>
-          <li>.id</li>
-          <li>.createTextNode</li>
-          <li>
-            .addEventListener(event, functionCall);
-            <ul>
-              <li>Keypress, Keydown, Keyup</li>
-              <li>Mousedown, Mouseup, Mouseenter, Mouseleave,</li>
-              <li>Mouseover, Mouseout, Mousemove</li>
-              <li>Click, Dblclick, Focus, Submit</li>
-              <li>Blur, Cut, Paste, Input, Change</li>
-            </ul>
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>document.getElementsByName("name");</li>
+            <li>document.getElementById("id");</li>
+            <li>document.getElementsByClassName("class");</li>
+            <li>document.querySelector("css selector");</li>
+            <li>document.querySelectorAll("css selector");</li>
+            <li>document.createElement("tag");</li>
+            <li>
+              <strong>classlist(.add/.remove/.toggle):</strong> Is a readonly
+              list that contains classes for a given element
+            </li>
+            <li>
+              <strong>textContent:</strong> Returns a string of the test given
+              in a single element.
+            </li>
+            <li>
+              <strong>innerHTML:</strong> Returns a string of all HTML given in
+              a single element
+            </li>
+            <li><strong>getAttribute():</strong> Read attributes</li>
+            <li><strong>setAttribute():</strong> Write attributes</li>
+            <li>.appendChild(element);</li>
+            <li>.insertBefore(newElement, otherElement);</li>
+            <li>.remove();</li>
+            <li>.parentNode;</li>
+            <li>.children;</li>
+            <li>.firstElementChild;</li>
+            <li>.lastElementChild;</li>
+            <li>.nextElementSibling</li>
+            <li>.id</li>
+            <li>.createTextNode</li>
+            <li>
+              .addEventListener(event, functionCall);
+              <ul>
+                <li>Keypress, Keydown, Keyup</li>
+                <li>Mousedown, Mouseup, Mouseenter, Mouseleave,</li>
+                <li>Mouseover, Mouseout, Mousemove</li>
+                <li>Click, Dblclick, Focus, Submit</li>
+                <li>Blur, Cut, Paste, Input, Change</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
         <h2>AJAX & XHR</h2>
         <p>
           Asynchronous JS And XML. Is a set of web technologies. It sends and
@@ -1336,14 +1380,16 @@
           HTTP. Can work with data other than XML (JSON, plain text).
         </p>
         <h3>Libraries & Other Methods</h3>
-        <ul>
-          <li>jQuery</li>
-          <li>Axios</li>
-          <li>Superagent</li>
-          <li>Fetch API</li>
-          <li>Prototype</li>
-          <li>Node HTTP</li>
-        </ul>
+        <div>
+          <ul>
+            <li>jQuery</li>
+            <li>Axios</li>
+            <li>Superagent</li>
+            <li>Fetch API</li>
+            <li>Prototype</li>
+            <li>Node HTTP</li>
+          </ul>
+        </div>
         <h3>Common way (.onload)</h3>
         <code>
           xhr.open('GET', 'sample.txt', true); xhr.onload = function() {
@@ -1374,12 +1420,14 @@
           <strong>Onerror</strong> (optional - handle errors).
         </p>
         <h3>Uses</h3>
-        <ul>
-          <li>Load local JSON file</li>
-          <li>Load external API</li>
-          <li>Forms with PHP</li>
-          <li>Fetch from database</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Load local JSON file</li>
+            <li>Load external API</li>
+            <li>Forms with PHP</li>
+            <li>Fetch from database</li>
+          </ul>
+        </div>
         <h2>Fetch API</h2>
         <p>
           Allows web browser to make HTTP requests to web server in a simpler
@@ -1394,39 +1442,45 @@
           <strong>Local Storage:</strong> allows you to store, read, add,
           modify, and delete data items for a domain.
         </p>
-        <ul>
-          <li>
-            <strong>setItem():</strong> stores a data item in a storage. Takes
-            "name" and "value" as parameters
-          </li>
-          <li>
-            <strong>getItem():</strong> retrieves a data item from the storage.
-            Takes a "name" as a parameter
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <strong>setItem():</strong> stores a data item in a storage. Takes
+              "name" and "value" as parameters
+            </li>
+            <li>
+              <strong>getItem():</strong> retrieves a data item from the
+              storage. Takes a "name" as a parameter
+            </li>
+          </ul>
+        </div>
         <p>
           <strong>Session Storage:</strong> identical to local storage but
           stores data for one session. Data is deleted when browser is closed.
         </p>
-        <ul>
-          <li><strong>setItem():</strong> same as local storage</li>
-          <li><strong>getItem():</strong> same as local storage</li>
-        </ul>
+        <div>
+          <ul>
+            <li><strong>setItem():</strong> same as local storage</li>
+            <li><strong>getItem():</strong> same as local storage</li>
+          </ul>
+        </div>
         <h3>Other properties and methods</h3>
-        <ul>
-          <li>
-            <strong>key(n):</strong> returns name of nth key in the storage
-          </li>
-          <li>
-            <strong>length:</strong> returns the number of data items stored in
-            the storage object
-          </li>
-          <li>
-            <strong>removeItem(keyName):</strong> removes that key from the
-            storage
-          </li>
-          <li><strong>clear():</strong> empty all key out of the storage</li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <strong>key(n):</strong> returns name of nth key in the storage
+            </li>
+            <li>
+              <strong>length:</strong> returns the number of data items stored
+              in the storage object
+            </li>
+            <li>
+              <strong>removeItem(keyName):</strong> removes that key from the
+              storage
+            </li>
+            <li><strong>clear():</strong> empty all key out of the storage</li>
+          </ul>
+        </div>
         <h2>Video and audio</h2>
         <h3>HTML media element</h3>
         <p>It is basically the video and audio HTML tags.</p>
@@ -1435,25 +1489,27 @@
           Gives developers access to features found in specialized applications
           like DAWs, Game Audio Engines such as:
         </p>
-        <ul>
-          <li>
-            <strong>Synthesis:</strong> generating sounds, building instruments,
-            manipulating sound using effects
-          </li>
-          <li>
-            <strong>Analysis:</strong> monitor frequency and time data, speech
-            recognition, pitch/rhythm detection
-          </li>
-          <li>
-            <strong>Visualization:</strong> using frequency and time data to
-            dinamically generate graphs based on audio playback
-          </li>
-          <li>
-            <strong>Spatialization:</strong> Simulating acoustics in a 2D or 3D
-            environment, adjusting audio based on positions of listener and
-            sound sources, typically used in games
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <strong>Synthesis:</strong> generating sounds, building
+              instruments, manipulating sound using effects
+            </li>
+            <li>
+              <strong>Analysis:</strong> monitor frequency and time data, speech
+              recognition, pitch/rhythm detection
+            </li>
+            <li>
+              <strong>Visualization:</strong> using frequency and time data to
+              dinamically generate graphs based on audio playback
+            </li>
+            <li>
+              <strong>Spatialization:</strong> Simulating acoustics in a 2D or
+              3D environment, adjusting audio based on positions of listener and
+              sound sources, typically used in games
+            </li>
+          </ul>
+        </div>
         <h3>WebRTC API</h3>
         <p>
           Web Real-Time Communication. Allows direct connection between
@@ -1462,29 +1518,37 @@
           the server, this is done thanks to "signaling". Here are some reasons
           to use WebRTC:
         </p>
-        <ul>
-          <li>Removes the need for extra apps</li>
-          <li>Embedded in web technologies</li>
-          <li>Secure (Encription)</li>
-          <li>Used on video and audio streaming apps like Spotify and Zoom</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Removes the need for extra apps</li>
+            <li>Embedded in web technologies</li>
+            <li>Secure (Encription)</li>
+            <li>
+              Used on video and audio streaming apps like Spotify and Zoom
+            </li>
+          </ul>
+        </div>
         <h3>Canvas API</h3>
-        <ul>
-          <li>You can draw graphics and text</li>
-          <li>Can implement animations</li>
-          <li>Good for web games in browser</li>
-          <li>Just use the canvas HTML tag</li>
-        </ul>
+        <div>
+          <ul>
+            <li>You can draw graphics and text</li>
+            <li>Can implement animations</li>
+            <li>Good for web games in browser</li>
+            <li>Just use the canvas HTML tag</li>
+          </ul>
+        </div>
       </section>
       <!-- Tooling and miscellaneous -->
       <section id="tooling_&_misc" class="main-section">
         <header>Tooling & Misc</header>
-        <ul>
-          <li><strong>Linters:</strong> ESlint</li>
-          <li><strong>Code formaters:</strong> Prettier</li>
-          <li><strong>Bundlers:</strong> Webpack, Parcel</li>
-          <li><strong>Extra:</strong> TypeScript</li>
-        </ul>
+        <div>
+          <ul>
+            <li><strong>Linters:</strong> ESlint</li>
+            <li><strong>Code formaters:</strong> Prettier</li>
+            <li><strong>Bundlers:</strong> Webpack, Parcel</li>
+            <li><strong>Extra:</strong> TypeScript</li>
+          </ul>
+        </div>
       </section>
       <!-- Where to go, next steps -->
       <section id="next_steps" class="main-section">

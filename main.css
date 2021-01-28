@@ -16,14 +16,20 @@ body {
 }
 
 nav {
-  padding: 6vh 1vw;
+  padding: 6vh 1.3vw;
   background-color: var(--jsyellowish);
+  height: 100vh;
+  max-width: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 
 main {
   padding: 3vh 3vw;
   background-color: var(--jsblack);
   color: var(--mintcream);
+  margin-left: 200px;
 }
 
 header {
@@ -31,11 +37,12 @@ header {
   font-weight: 600;
 }
 
-a {
+nav a {
   text-decoration: none;
   margin-top: 2vh;
   display: flex;
   flex-direction: column;
+  font-size: 1.1rem;
 }
 
 nav,
@@ -46,26 +53,68 @@ a {
 main h2 {
   border-bottom: 1px solid yellow;
   font-size: 1.3rem;
+  margin: 2.7vh 0;
+}
+
+main h3 {
+  font-size: 1.1rem;
+}
+
+main h2,
+main h3 {
   font-weight: 500;
 }
 
-main p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-top: 1.5vh;
+.gl-scope-header,
+.lcl-scope-header {
+  margin: 2vh 0;
 }
 
-code {
-  border: 1px solid pink;
+main p {
+  font-weight: 400;
+  margin: 1.5vh 0;
+}
+
+.code-sect {
   background-color: #777;
+  width: 50%;
+  padding: 1.3rem;
+  border-radius: 8px;
+}
+
+table,
+tr,
+td {
+  border-bottom: 1px solid var(--jsblack);
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+  /* width: 50%; */
+}
+
+tr:nth-child(even) {
+  background-color: #e1e1e1;
+}
+
+tr:first-child {
+  background-color: var(--jsyellowish);
+  font-weight: 700;
 }
 
 table {
-  border: 1px solid red;
+  width: 50%;
+  height: 130px;
+  background-color: var(--mintcream);
+  color: var(--jsblack);
 }
 
-ul {
-  border: 1px solid purple;
+tr ul {
+  /* border: 1px solid purple; */
+  padding: 1rem;
+}
+
+div li {
+  margin-left: 1rem;
 }
 /* Make the title fonts bigger, some need to be smaller in order to have a design that makes sense */
 
