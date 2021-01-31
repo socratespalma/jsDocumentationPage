@@ -165,41 +165,13 @@ main h4 {
   table {
     width: 70%;
   }
-
-  nav a {
-    font-size: 1.3rem;
-  }
 }
 
-/* Tablet (includes regular iPad and surface duo)*/
+/* Tablet (includes regular iPad and surface duo)
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  main {
-    background-color: green;
-  }
-
   /* We need a hamburguer icon from here... */
-
-  /* nav {
-    max-width: 150px;
-    height: 100vh;
-  }
-
-  main {
-    margin-left: 150px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  nav header {
-    font-size: 1.2rem;
-  } */
-}
+/* } */
 
 /* Phone */
-@media only screen and (max-width: 480px) {
-  main {
-    background-color: #fff;
-  }
-}
+/* @media only screen and (max-width: 480px) {
+} */
