@@ -79,11 +79,12 @@ main h3 {
 main p {
   font-weight: 400;
   margin: 1.5vh 0;
+  text-align: justify;
 }
 
 .code-sect {
   background-color: #777;
-  width: 50%;
+  width: 60%;
   padding: 1.3rem;
   border-radius: 8px;
 }
@@ -134,7 +135,10 @@ main h4 {
 .currying-img,
 .eventloop-img,
 .fetchapi-img,
-.promise-img {
+.promise-img,
+.asyncawait-img,
+.closure-img,
+.ajaxxhr-img {
   width: 80%;
   height: 80%;
 }
@@ -147,23 +151,50 @@ main h4 {
 
 /* Smaller screen desktop */
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-  main {
-    background-color: red;
+  .code-sect {
+    width: 75%;
   }
 }
 
-/* Landscape tablet */
+/* Landscape tablet (includes iPad pro) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  main {
-    background-color: blue;
+  .code-sect {
+    width: 100%;
+  }
+
+  table {
+    width: 70%;
+  }
+
+  nav a {
+    font-size: 1.3rem;
   }
 }
 
-/* Tablet */
+/* Tablet (includes regular iPad and surface duo)*/
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   main {
     background-color: green;
   }
+
+  /* We need a hamburguer icon from here... */
+
+  /* nav {
+    max-width: 150px;
+    height: 100vh;
+  }
+
+  main {
+    margin-left: 150px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  nav header {
+    font-size: 1.2rem;
+  } */
 }
 
 /* Phone */
